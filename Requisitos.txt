@@ -1,0 +1,19 @@
+Requisitos:
+
+-----Funcionalidades-----
+-Compile : OK
+-Palas controladas por el jugador : OK
+-Bola, que revote : OK (MEJORABLE)
+-Sistema de puntuación : 
+-Que los controles sean comodos : OK
+-Menu de pausa :
+-Menu de inicio :
+-Menu de settigns :
+
+-----ARTES-----
+-Fuente propia : 
+-Color de fondo : 
+-Estetica propia :
+-Musica : 
+-Sonidos de impacto : 
+-Sonido de "GOL" :
