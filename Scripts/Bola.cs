@@ -7,6 +7,8 @@ public class Bola : MonoBehaviour
     public Rigidbody2D rb;
     public Collider2D bola;
 
+	public Puntuacion Puntuacion;
+
 	public GameManager GameManager;
 	public int inclinarange;
     public int power;
@@ -43,14 +45,20 @@ public class Bola : MonoBehaviour
 		if (transform.position.x < -9)
 		{
 			GameManager.Score++;
-			Debug.Log(GameManager.Score);
-			GameManager.ChangeScene("");
+			Puntuacion.move_score(-2);
+			if (GameManager.Score >= 5)
+				GameManager.ChangeScene("Exit");
+			else;
+				GameManager.ChangeScene("");
 		}
 		else if (transform.position.x > 9)
 		{
 			GameManager.Score--;
-			Debug.Log(GameManager.Score);
-			GameManager.ChangeScene("");
+			Puntuacion.move_score(2);
+			if (GameManager.Score <= -5)
+				GameManager.ChangeScene("Exit");
+			else;
+				GameManager.ChangeScene("");
 		}
 	}
 }

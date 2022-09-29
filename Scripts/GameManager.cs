@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject pausedPannel;
 
+    public GameObject GameoverPannel;
     public AudioClip Musica;
-    public static int Score;
+    public static int Score = 0;
 
     public AudioClip MusicaGOL;
 
@@ -47,15 +48,13 @@ public class GameManager : MonoBehaviour
         Text[] texts=Resources.FindObjectsOfTypeAll<Text>();
         Button[] buttons=Resources.FindObjectsOfTypeAll<Button>();
         foreach(var i in texts){
-            if(i.gameObject.CompareTag("PauseMenu")){
+            if(i.gameObject.CompareTag("PauseMenu"))
                 i.gameObject.SetActive(false);
-            }
         }
 
         foreach(var j in buttons){
-            if(j.gameObject.CompareTag("PauseMenu")){
+            if(j.gameObject.CompareTag("PauseMenu"))
                 j.gameObject.SetActive(false);
-            }
         }
     }
 
@@ -65,17 +64,33 @@ public class GameManager : MonoBehaviour
         Button[] buttons=Resources.FindObjectsOfTypeAll<Button>();
         foreach(var i in texts)
         {
-            if(i.gameObject.CompareTag("PauseMenu")){
+            if(i.gameObject.CompareTag("PauseMenu"))
                 i.gameObject.SetActive(true);
-            }
         }
 
         foreach(var j in buttons)
         {
-            if(j.gameObject.CompareTag("PauseMenu")){
+            if(j.gameObject.CompareTag("PauseMenu"))
                 j.gameObject.SetActive(true);
-            }
         }
 
+    }
+
+    public void lose_game()
+    {
+        Time.timeScale = 0;
+        Text[] texts = Resources.FindObjectsOfTypeAll<Text>();
+        Button[] buttons = Resources.FindObjectsOfTypeAll<Button>();
+        foreach(var i in texts)
+        {
+            if (i.gameObject.CompareTag("GameoverMenu"))
+                i.gameObject.SetActive(true);
+        }
+
+        foreach(var j in buttons)
+        {
+            if (j.gameObject.CompareTag("GameoverMenu"))
+                j.gameObject.SetActive(true);
+        }
     }
 }
