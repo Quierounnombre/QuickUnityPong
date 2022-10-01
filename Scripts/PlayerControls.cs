@@ -6,6 +6,7 @@ public class PlayerControls : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed;
+    public float speed_increase;
     public string Dir;
     public Collider2D character;
 
@@ -31,5 +32,10 @@ public class PlayerControls : MonoBehaviour
         {
             rb.velocity = movement;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        speed += speed_increase;
     }
 }

@@ -3,8 +3,8 @@ Requisitos:
 -----Funcionalidades-----
 -Compile : OK
 -Palas controladas por el jugador : OK
--Bola, que revote : OK (MEJORABLE)
--Sistema de puntuación : 
+-Bola, que revote : OK
+-Sistema de puntuación : OK
 -Que los controles sean comodos : OK
 -Menu de pausa :
 -Menu de inicio :

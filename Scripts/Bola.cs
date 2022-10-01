@@ -10,36 +10,35 @@ public class Bola : MonoBehaviour
 	public Puntuacion Puntuacion;
 
 	public GameManager GameManager;
-	public int inclinarange;
-    public int power;
+
+    public float	power;
+
+	public float	power_max;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         bola = GetComponent<CircleCollider2D>();
-        Vector2 Vinit = new Vector2 (power, 0);
+        Vector2 Vinit = new Vector2 (power, Random.Range(power * 0.5f, -power * 0.5f));
         rb.velocity = Vinit;
     }
 
+/*
     private void OnCollisionEnter2D(Collision2D other)
     {
-		float	inclina;
 		Vector2 Vresult;
 
-		if (other.gameObject.name == "J1" || other.gameObject.name == "J2")
+		power = rb.velocity.x;
+		if (power > power_max && power < -power_max)
 		{
-			power = -power;
-			inclina = Random.Range(-inclinarange, inclinarange);
+			if (power > 0)
+				power = power_max;
+			else
+				power = power_max;
 		}
-		else if (rb.velocity.y > 0)
-			inclina = Random.Range(-inclinarange, 0);
-		else
-			inclina = Random.Range(0, inclinarange);
-		if (inclina == 0)
-			inclina = Random.Range(-1, 1);
-		Vresult = new Vector2 (power, inclina);
-        rb.velocity = Vresult;
+		Vresult = new Vector2 (power, rb.velocity.y);
+    	rb.velocity = Vresult;
     }
-
+*/
 	private void LateUpdate()
 	{
 		if (transform.position.x < -9)
