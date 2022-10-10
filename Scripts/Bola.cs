@@ -7,7 +7,10 @@ public class Bola : MonoBehaviour
     public Rigidbody2D rb;
     public Collider2D bola;
 
-	public Puntuacion Puntuacion;
+	public Puntuacion Puntuacion_r;
+	public Puntuacion Puntuacion_s; 
+
+	public AudioSource[] bounce_sound;
 
 	public GameManager GameManager;
 
@@ -22,6 +25,14 @@ public class Bola : MonoBehaviour
         rb.velocity = Vinit;
     }
 
+
+    private void OnCollisionEnter2D(Collision2D other)
+	{
+		int	rand;
+
+		rand = Random.Range(0, 6);
+		bounce_sound[rand].Play();
+	}
 /*
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -44,20 +55,16 @@ public class Bola : MonoBehaviour
 		if (transform.position.x < -9)
 		{
 			GameManager.Score++;
-			Puntuacion.move_score(-2);
-			if (GameManager.Score >= 5)
-				GameManager.ChangeScene("Exit");
-			else;
-				GameManager.ChangeScene("");
+			Puntuacion_r.move_score(-2);
+			Puntuacion_s.move_score(-2);
+			GameManager.ChangeScene("");
 		}
 		else if (transform.position.x > 9)
 		{
 			GameManager.Score--;
-			Puntuacion.move_score(2);
-			if (GameManager.Score <= -5)
-				GameManager.ChangeScene("Exit");
-			else;
-				GameManager.ChangeScene("");
+			Puntuacion_r.move_score(2);
+			Puntuacion_s.move_score(2);
+			GameManager.ChangeScene("");
 		}
 	}
 }

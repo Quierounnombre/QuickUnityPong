@@ -12,8 +12,9 @@ Requisitos:
 
 -----ARTES-----
 -Fuente propia : 
--Color de fondo : 
--Estetica propia :
--Musica : 
--Sonidos de impacto : 
--Sonido de "GOL" :
+-Color de fondo : OK
+-Estetica propia : OK
+-Musica : KO
+-Sonidos de impacto : OK
+-Sonido de "GOL" : KO
+-Sonido de patos : OK ^^

@@ -10,6 +10,8 @@ public class PlayerControls : MonoBehaviour
     public string Dir;
     public Collider2D character;
 
+    public GameManager GameManager;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,6 +24,8 @@ public class PlayerControls : MonoBehaviour
         {
             GameManager.instance.pause();
         }
+        if (Input.GetButton("j"))
+            GameManager.ChangeScene("");
     }
 
     void FixedUpdate()

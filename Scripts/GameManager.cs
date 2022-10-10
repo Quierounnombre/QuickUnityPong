@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
     public AudioClip Musica;
     public static int Score = 0;
 
-    public AudioClip MusicaGOL;
+    public AudioClip duck;
 
     void Awake()
     {
@@ -76,15 +77,23 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void lose_game()
+    public void lose_game(bool isred)
     {
         Time.timeScale = 0;
-        Text[] texts = Resources.FindObjectsOfTypeAll<Text>();
+        TextMeshProUGUI[] texts = Resources.FindObjectsOfTypeAll<TextMeshProUGUI>();
         Button[] buttons = Resources.FindObjectsOfTypeAll<Button>();
         foreach(var i in texts)
         {
-            if (i.gameObject.CompareTag("GameoverMenu"))
-                i.gameObject.SetActive(true);
+            if (isred)
+            {
+                if (i.gameObject.CompareTag("GameoverMenu_red"))
+                    i.gameObject.SetActive(true);
+            }
+            else
+            {
+                if (i.gameObject.CompareTag("GameoverMenu_blue"))
+                    i.gameObject.SetActive(true);
+            }
         }
 
         foreach(var j in buttons)
@@ -92,5 +101,34 @@ public class GameManager : MonoBehaviour
             if (j.gameObject.CompareTag("GameoverMenu"))
                 j.gameObject.SetActive(true);
         }
+    }
+
+	public void new_game()
+	{
+		Time.timeScale = 1;
+		Score = 0;
+		TextMeshProUGUI[] texts = Resources.FindObjectsOfTypeAll<TextMeshProUGUI>();
+        Button[] buttons = Resources.FindObjectsOfTypeAll<Button>();
+        foreach(var i in texts)
+        {
+            if (i.gameObject.CompareTag("GameoverMenu_red"))
+                    i.gameObject.SetActive(false);
+			if (i.gameObject.CompareTag("GameoverMenu_blue"))
+                    i.gameObject.SetActive(false);
+        }
+
+        foreach(var j in buttons)
+        {
+            if (j.gameObject.CompareTag("GameoverMenu"))
+                j.gameObject.SetActive(false);
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (Score >= 5)
+            lose_game(false);
+        else if (Score <= -5)
+			lose_game(true);
     }
 }
