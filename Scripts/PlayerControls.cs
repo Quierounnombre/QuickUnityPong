@@ -24,7 +24,7 @@ public class PlayerControls : MonoBehaviour
         {
             GameManager.instance.pause();
         }
-        if (Input.GetButton("j"))
+        if (Input.GetButton("j") && Time.timeScale != 0)
             GameManager.ChangeScene("");
     }
 

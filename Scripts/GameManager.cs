@@ -9,9 +9,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
-    public GameObject pausedPannel;
+    public Puntuacion[] Puntuacion;
 
-    public GameObject GameoverPannel;
     public AudioClip Musica;
     public static int Score = 0;
 
@@ -19,11 +18,11 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+    
         if (instance == null)
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
     }
     public void ChangeScene(string sc)
     {
@@ -106,9 +105,9 @@ public class GameManager : MonoBehaviour
 	public void new_game()
 	{
 		Time.timeScale = 1;
-		Score = 0;
 		TextMeshProUGUI[] texts = Resources.FindObjectsOfTypeAll<TextMeshProUGUI>();
         Button[] buttons = Resources.FindObjectsOfTypeAll<Button>();
+
         foreach(var i in texts)
         {
             if (i.gameObject.CompareTag("GameoverMenu_red"))
@@ -116,14 +115,36 @@ public class GameManager : MonoBehaviour
 			if (i.gameObject.CompareTag("GameoverMenu_blue"))
                     i.gameObject.SetActive(false);
         }
-
         foreach(var j in buttons)
         {
             if (j.gameObject.CompareTag("GameoverMenu"))
                 j.gameObject.SetActive(false);
         }
+        adjust_score();
     }
 
+    private void adjust_score()
+    {
+        var objectCount = Puntuacion.Length;
+        int i = 0;
+        int movement;
+
+        movement = 2;
+        if (Score < 0)
+        {
+            movement = -movement;
+            Score = -Score;
+        }
+        while (Score != 0)
+        {
+            while (objectCount != i)
+            {
+                Puntuacion[i].move_score[movement];
+                i++;
+            }
+            Score--;
+        }
+    }
     private void LateUpdate()
     {
         if (Score >= 5)
