@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
-    public Puntuacion[] Puntuacion;
+    public Puntuacion Puntuacion;
 
     public AudioClip Musica;
     public static int Score = 0;
@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
             if (sc != "Exit")
             {
                 SceneManager.LoadScene(sc);
+	        	new_game();
             }
             else
             {
@@ -104,6 +105,7 @@ public class GameManager : MonoBehaviour
 
 	public void new_game()
 	{
+        int flag = 2;
 		Time.timeScale = 1;
 		TextMeshProUGUI[] texts = Resources.FindObjectsOfTypeAll<TextMeshProUGUI>();
         Button[] buttons = Resources.FindObjectsOfTypeAll<Button>();
@@ -120,28 +122,14 @@ public class GameManager : MonoBehaviour
             if (j.gameObject.CompareTag("GameoverMenu"))
                 j.gameObject.SetActive(false);
         }
-        adjust_score();
-    }
-
-    private void adjust_score()
-    {
-        var objectCount = Puntuacion.Length;
-        int i = 0;
-        int movement;
-
-        movement = 2;
         if (Score < 0)
         {
-            movement = -movement;
             Score = -Score;
+            flag = -flag;
         }
-        while (Score != 0)
+        while(Score != 0)
         {
-            while (objectCount != i)
-            {
-                Puntuacion[i].move_score[movement];
-                i++;
-            }
+            Puntuacion.move_score(flag);
             Score--;
         }
     }

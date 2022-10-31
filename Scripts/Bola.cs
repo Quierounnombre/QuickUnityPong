@@ -7,8 +7,7 @@ public class Bola : MonoBehaviour
     public Rigidbody2D rb;
     public Collider2D bola;
 
-	public Puntuacion Puntuacion_r;
-	public Puntuacion Puntuacion_s; 
+	public Puntuacion Puntuacion;
 
 	public AudioSource[] bounce_sound;
 
@@ -55,15 +54,13 @@ public class Bola : MonoBehaviour
 		if (transform.position.x < -9)
 		{
 			GameManager.Score++;
-			Puntuacion_r.move_score(-2);
-			Puntuacion_s.move_score(-2);
+			Puntuacion.move_score(-2);
 			GameManager.ChangeScene("");
 		}
 		else if (transform.position.x > 9)
 		{
 			GameManager.Score--;
-			Puntuacion_r.move_score(2);
-			Puntuacion_s.move_score(2);
+			Puntuacion.move_score(2);
 			GameManager.ChangeScene("");
 		}
 	}

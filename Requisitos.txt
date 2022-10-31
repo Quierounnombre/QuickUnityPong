@@ -6,15 +6,20 @@ Requisitos:
 -Bola, que revote : OK
 -Sistema de puntuación : OK
 -Que los controles sean comodos : OK
--Menu de pausa :
--Menu de inicio :
--Menu de settigns :
+-Menu de pausa : OK
+-Menu de inicio : OK
+-Menu de settigns : NOPE
 
 -----ARTES-----
--Fuente propia : 
+-Fuente propia : NOPE
 -Color de fondo : OK
 -Estetica propia : OK
 -Musica : KO
 -Sonidos de impacto : OK
 -Sonido de "GOL" : KO
 -Sonido de patos : OK ^^
+
+-----Extra-----
+-Personajes: WIP
+-Sistema de selección: OK (WIP 70% falta repasar los textos, resaltar el selecionado, indicarle al Gm cual escojer)
+-Artes de personajes: WIP
