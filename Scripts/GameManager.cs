@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
             };
         }
     }
+
     public void resume(){
         Time.timeScale=1;
         Text[] texts=Resources.FindObjectsOfTypeAll<Text>();

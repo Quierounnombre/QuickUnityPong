@@ -155,6 +155,8 @@ MonoBehaviour:
   Puntuacion: {fileID: 1126317124}
   Musica: {fileID: 0}
   duck: {fileID: 0}
+  red_player: 1
+  blue_player: 1
 --- !u!4 &97548743
 Transform:
   m_ObjectHideFlags: 0
@@ -3424,6 +3426,7 @@ GameObject:
   - component: {fileID: 1602603768}
   - component: {fileID: 1602603771}
   - component: {fileID: 1602603772}
+  - component: {fileID: 1602603773}
   m_Layer: 0
   m_Name: J1
   m_TagString: Untagged
@@ -3563,6 +3566,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1602603773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602603767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc7efd39d534b6046924397cde9f53d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1602603768}
+  speed: 7
+  speed_increase: 0.1
+  Dir: Vertical
+  character: {fileID: 1602603772}
+  GameManager: {fileID: 97548742}
+  H_Dir: Horizontal
 --- !u!1 &1603185056
 GameObject:
   m_ObjectHideFlags: 0
