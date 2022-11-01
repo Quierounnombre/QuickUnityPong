@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 157867974}
   m_Layer: 0
   m_Name: Conejo
-  m_TagString: Untagged
+  m_TagString: BlueSelector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,7 +275,11 @@ MonoBehaviour:
   tooltiptext: {fileID: 316675771}
   Contrary_Grid: {fileID: 1649784102}
   text: {fileID: 316675773}
+  Gm: {fileID: 1236911946}
   selected_text: 4
+  selected: {r: 0, g: 0.16862746, b: 1, a: 1}
+  white: {r: 1, g: 1, b: 1, a: 1}
+  ch_selection_side: 0
 --- !u!1 &306128668
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +862,7 @@ GameObject:
   - component: {fileID: 437976851}
   m_Layer: 0
   m_Name: Basico
-  m_TagString: Untagged
+  m_TagString: RedSelector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -920,7 +924,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -995,7 +999,11 @@ MonoBehaviour:
   tooltiptext: {fileID: 634702141}
   Contrary_Grid: {fileID: 481708103}
   text: {fileID: 634702143}
-  selected_text: 2
+  Gm: {fileID: 1236911946}
+  selected_text: 1
+  selected: {r: 1, g: 0, b: 0, a: 1}
+  white: {r: 1, g: 1, b: 1, a: 1}
+  ch_selection_side: 1
 --- !u!1 &481708103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,7 +1428,7 @@ GameObject:
   - component: {fileID: 769150516}
   m_Layer: 0
   m_Name: Basico
-  m_TagString: Untagged
+  m_TagString: BlueSelector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1482,7 +1490,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.16862746, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1557,7 +1565,11 @@ MonoBehaviour:
   tooltiptext: {fileID: 316675771}
   Contrary_Grid: {fileID: 1649784102}
   text: {fileID: 316675773}
-  selected_text: 2
+  Gm: {fileID: 1236911946}
+  selected_text: 1
+  selected: {r: 0, g: 0.16862746, b: 1, a: 1}
+  white: {r: 1, g: 1, b: 1, a: 1}
+  ch_selection_side: 0
 --- !u!1 &791071041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,7 +1669,7 @@ GameObject:
   - component: {fileID: 835153000}
   m_Layer: 0
   m_Name: Ilusionista
-  m_TagString: Untagged
+  m_TagString: RedSelector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1794,7 +1806,11 @@ MonoBehaviour:
   tooltiptext: {fileID: 634702141}
   Contrary_Grid: {fileID: 481708103}
   text: {fileID: 634702143}
+  Gm: {fileID: 1236911946}
   selected_text: 3
+  selected: {r: 1, g: 0, b: 0, a: 1}
+  white: {r: 1, g: 1, b: 1, a: 1}
+  ch_selection_side: 1
 --- !u!1 &876640356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,7 +1826,7 @@ GameObject:
   - component: {fileID: 876640359}
   m_Layer: 0
   m_Name: Aguila
-  m_TagString: Untagged
+  m_TagString: RedSelector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1947,7 +1963,11 @@ MonoBehaviour:
   tooltiptext: {fileID: 634702141}
   Contrary_Grid: {fileID: 481708103}
   text: {fileID: 634702143}
-  selected_text: 1
+  Gm: {fileID: 1236911946}
+  selected_text: 2
+  selected: {r: 1, g: 0, b: 0, a: 1}
+  white: {r: 1, g: 1, b: 1, a: 1}
+  ch_selection_side: 1
 --- !u!1 &919895291
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,6 +2182,8 @@ MonoBehaviour:
   Puntuacion: {fileID: 0}
   Musica: {fileID: 0}
   duck: {fileID: 0}
+  red_player: 1
+  blue_player: 1
 --- !u!1 &1399788334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,7 +2199,7 @@ GameObject:
   - component: {fileID: 1399788337}
   m_Layer: 0
   m_Name: Aguila
-  m_TagString: Untagged
+  m_TagString: BlueSelector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2267,7 +2289,11 @@ MonoBehaviour:
   tooltiptext: {fileID: 316675771}
   Contrary_Grid: {fileID: 1649784102}
   text: {fileID: 316675773}
-  selected_text: 1
+  Gm: {fileID: 1236911946}
+  selected_text: 2
+  selected: {r: 0, g: 0.16862746, b: 1, a: 1}
+  white: {r: 1, g: 1, b: 1, a: 1}
+  ch_selection_side: 0
 --- !u!50 &1399788338
 Rigidbody2D:
   serializedVersion: 4
@@ -2330,7 +2356,7 @@ GameObject:
   - component: {fileID: 1577125973}
   m_Layer: 0
   m_Name: Conejo
-  m_TagString: Untagged
+  m_TagString: RedSelector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2467,7 +2493,11 @@ MonoBehaviour:
   tooltiptext: {fileID: 634702141}
   Contrary_Grid: {fileID: 481708103}
   text: {fileID: 634702143}
+  Gm: {fileID: 1236911946}
   selected_text: 4
+  selected: {r: 1, g: 0, b: 0, a: 1}
+  white: {r: 1, g: 1, b: 1, a: 1}
+  ch_selection_side: 1
 --- !u!1 &1594108325
 GameObject:
   m_ObjectHideFlags: 0
@@ -2516,7 +2546,7 @@ GameObject:
   - component: {fileID: 1644437048}
   m_Layer: 0
   m_Name: Ilusionista
-  m_TagString: Untagged
+  m_TagString: BlueSelector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2653,7 +2683,11 @@ MonoBehaviour:
   tooltiptext: {fileID: 316675771}
   Contrary_Grid: {fileID: 1649784102}
   text: {fileID: 316675773}
+  Gm: {fileID: 1236911946}
   selected_text: 3
+  selected: {r: 0, g: 0.16862746, b: 1, a: 1}
+  white: {r: 1, g: 1, b: 1, a: 1}
+  ch_selection_side: 0
 --- !u!1 &1649784102
 GameObject:
   m_ObjectHideFlags: 0

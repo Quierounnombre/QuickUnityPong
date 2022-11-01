@@ -11,12 +11,19 @@ public class CharacterSelector : MonoBehaviour
 	public GameObject tooltiptext;
 	public GameObject Contrary_Grid;
 	public TextMeshProUGUI text;
-
+	public GameManager Gm;
 	public int selected_text;
+	public Color selected;
+	public Color white;
+	private SpriteRenderer	rd;
+	public bool	ch_selection_side;
+
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        cl = GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D> ();
+        cl = GetComponent<BoxCollider2D> ();
+		rd = GetComponent<SpriteRenderer> ();
     }
 
     private void OnMouseOver()
@@ -32,6 +39,23 @@ public class CharacterSelector : MonoBehaviour
 		TooltipBackGround.SetActive(false);
 		tooltiptext.SetActive(false);
 		Contrary_Grid.SetActive(true);
+	}
+
+	private void OnMouseUp()
+	{
+		if (ch_selection_side)
+			Gm.red_player = selected_text;
+		else
+			Gm.blue_player = selected_text;
+		SpriteRenderer[] o_rd = Resources.FindObjectsOfTypeAll<SpriteRenderer>();
+		foreach(var i in o_rd)
+		{
+			if (i.gameObject.CompareTag("RedSelector") && ch_selection_side)
+				i.color = white;
+			else if (i.gameObject.CompareTag("BlueSelector") && !ch_selection_side)
+				i.color = white;
+		}
+		rd.color = selected;
 	}
 
 	private void assign_text(int selected_text)

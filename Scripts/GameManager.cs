@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
 
     public AudioClip duck;
 
+    public int red_player = 1;
+
+    public int blue_player = 1;
     void Awake()
     {
     

@@ -21,5 +21,5 @@ Requisitos:
 
 -----Extra-----
 -Personajes: WIP
--Sistema de selección: OK (WIP 70% falta repasar los textos, resaltar el selecionado, indicarle al Gm cual escojer)
+-Sistema de selección: OK (WIP 80% falta repasar los textos, indicarle al Gm cual escojer)
 -Artes de personajes: WIP
