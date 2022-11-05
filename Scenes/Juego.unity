@@ -154,6 +154,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Puntuacion: {fileID: 1126317124}
   Musica: {fileID: 0}
+  Player:
+  - {fileID: 1602603774}
+  - {fileID: 1530059050}
   duck: {fileID: 0}
   red_player: 1
   blue_player: 1
@@ -3274,6 +3277,8 @@ GameObject:
   - component: {fileID: 1530059046}
   - component: {fileID: 1530059045}
   - component: {fileID: 1530059044}
+  - component: {fileID: 1530059049}
+  - component: {fileID: 1530059050}
   m_Layer: 0
   m_Name: J2
   m_TagString: Untagged
@@ -3314,13 +3319,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530059043}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14530c1e976eac4d856f5321255fe9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1530059046}
-  speed: 7
+  speed: 15
   speed_increase: 0.1
   Dir: Vertical2
   character: {fileID: 1530059044}
@@ -3413,6 +3418,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1530059049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530059043}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc7efd39d534b6046924397cde9f53d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1530059046}
+  speed: 18
+  speed_increase: 0.1
+  Dir: Vertical2
+  character: {fileID: 1530059044}
+  GameManager: {fileID: 97548742}
+  H_Dir: Horizontal2
+--- !u!114 &1530059050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530059043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f7d01058f5ea34d80e06d369707fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1602603767
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,6 +3463,7 @@ GameObject:
   - component: {fileID: 1602603771}
   - component: {fileID: 1602603772}
   - component: {fileID: 1602603773}
+  - component: {fileID: 1602603774}
   m_Layer: 0
   m_Name: J1
   m_TagString: Untagged
@@ -3529,13 +3566,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602603767}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14530c1e976eac4d856f5321255fe9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1602603768}
-  speed: 7
+  speed: 8
   speed_increase: 0.1
   Dir: Vertical
   character: {fileID: 1602603772}
@@ -3573,18 +3610,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602603767}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc7efd39d534b6046924397cde9f53d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1602603768}
-  speed: 7
+  speed: 11
   speed_increase: 0.1
   Dir: Vertical
   character: {fileID: 1602603772}
   GameManager: {fileID: 97548742}
   H_Dir: Horizontal
+--- !u!114 &1602603774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602603767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f7d01058f5ea34d80e06d369707fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1603185056
 GameObject:
   m_ObjectHideFlags: 0

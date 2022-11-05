@@ -1064,7 +1064,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512879519}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1074,7 +1074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 96}
+  m_AnchoredPosition: {x: 0, y: 95.999985}
   m_SizeDelta: {x: 473.7186, y: 87.5692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &512879521
@@ -2181,6 +2181,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Puntuacion: {fileID: 0}
   Musica: {fileID: 0}
+  Player:
+  - {fileID: 0}
+  - {fileID: 0}
   duck: {fileID: 0}
   red_player: 1
   blue_player: 1

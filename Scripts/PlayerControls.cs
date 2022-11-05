@@ -37,9 +37,4 @@ public class PlayerControls : MonoBehaviour
             rb.velocity = movement;
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        speed += speed_increase;
-    }
 }

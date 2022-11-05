@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public Puntuacion Puntuacion;
 
     public AudioClip Musica;
+
+    public Character_activator[] Player;
     public static int Score = 0;
 
     public AudioClip duck;
@@ -21,7 +23,6 @@ public class GameManager : MonoBehaviour
     public int blue_player = 1;
     void Awake()
     {
-    
         if (instance == null)
             instance = this;
         else if (instance != this)
@@ -40,6 +41,8 @@ public class GameManager : MonoBehaviour
             {
                 SceneManager.LoadScene(sc);
 	        	new_game();
+                Player[0].activate(blue_player);
+                Player[1].activate(red_player);
             }
             else
             {
