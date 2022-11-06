@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
-using System;
 using UnityEngine;
 
-public class Character_activator : MonoBehaviour
+public class Ch_activator : MonoBehaviour
 {
+    public bool         is_red;
+	public GameManager	gm;
+
     private void Start()
     {
-        
+        if (is_red)
+            activate(gm.red_player);
+        else
+            activate(gm.blue_player);
     }
-	public void activate(int selected_character)
+	private void activate(int selected_character)
 	{
         if (selected_character == 1)
         {

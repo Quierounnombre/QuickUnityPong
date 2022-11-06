@@ -47,13 +47,23 @@ public class Aguila : PlayerControls
 			transform.position = new Vector2 (over_pos - correction, y_pos);
 	}
 
+    void Update()
+    {
+        if(Input.GetButton("Cancel"))
+        {
+            GameManager.instance.pause();
+        }
+        if (Input.GetButton("j") && Time.timeScale != 0)
+            GameManager.ChangeScene("");
+    }
     void FixedUpdate()
     {
         if (check_pos())
 		{
         	float horizontal = Input.GetAxis(H_Dir);
-        	Vector2 movement = new Vector2 (horizontal * speed, 0);
-       	 	if(horizontal != 0)
+			float vertical = Input.GetAxis(Dir);
+        	Vector2 movement = new Vector2 (horizontal * speed, vertical * speed);
+       	 	if(horizontal != 0 || vertical != 0)
       		{
       			rb.velocity = movement;
 		  	}

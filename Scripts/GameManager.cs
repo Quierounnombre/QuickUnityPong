@@ -13,23 +13,29 @@ public class GameManager : MonoBehaviour
 
     public AudioClip Musica;
 
-    public Character_activator[] Player;
     public static int Score = 0;
 
     public AudioClip duck;
 
-    public int red_player = 1;
+	private static int stored_red_player = 1;
+	private static int stored_blue_player = 1;
+    public int red_player;
+    public int blue_player;
 
-    public int blue_player = 1;
     void Awake()
     {
         if (instance == null)
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
+		red_player = stored_red_player;
+		blue_player = stored_blue_player;
     }
+
     public void ChangeScene(string sc)
     {
+		stored_blue_player = blue_player;
+		stored_red_player = red_player;
         if (sc == "")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -41,9 +47,7 @@ public class GameManager : MonoBehaviour
             {
                 SceneManager.LoadScene(sc);
 	        	new_game();
-                Player[0].activate(blue_player);
-                Player[1].activate(red_player);
-            }
+	        }
             else
             {
                 Application.Quit();
