@@ -17,9 +17,9 @@ Requisitos:
 -Musica : KO
 -Sonidos de impacto : OK
 -Sonido de "GOL" : KO
--Sonido de patos : OK ^^
+-Sonido de patos : OK ^^ (NOT OK :/)
 
 -----Extra-----
--Personajes: WIP
--Sistema de selección: OK (WIP 80% falta repasar los textos, indicarle al Gm cual escojer)
+-Personajes: 2/4
+-Sistema de selección: OK
 -Artes de personajes: WIP

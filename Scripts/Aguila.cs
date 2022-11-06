@@ -11,6 +11,8 @@ public class Aguila : PlayerControls
         rb.constraints = RigidbodyConstraints2D.None;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 		start_pos = transform.position.x;
+		rb = GetComponent<Rigidbody2D>();
+        character = GetComponent<BoxCollider2D>();
 		if (start_pos < 0)
 			start_pos = -start_pos;
     }

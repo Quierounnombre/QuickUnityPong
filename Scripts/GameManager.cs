@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     public void resume(){
         Time.timeScale=1;
-        Text[] texts=Resources.FindObjectsOfTypeAll<Text>();
+        TextMeshProUGUI[] texts=Resources.FindObjectsOfTypeAll<TextMeshProUGUI>();
         Button[] buttons=Resources.FindObjectsOfTypeAll<Button>();
         foreach(var i in texts){
             if(i.gameObject.CompareTag("PauseMenu"))
@@ -72,18 +72,22 @@ public class GameManager : MonoBehaviour
 
     public void pause(){
         Time.timeScale=0;
-        Text[] texts=Resources.FindObjectsOfTypeAll<Text>();
+        TextMeshProUGUI[] texts=Resources.FindObjectsOfTypeAll<TextMeshProUGUI>();
         Button[] buttons=Resources.FindObjectsOfTypeAll<Button>();
         foreach(var i in texts)
         {
             if(i.gameObject.CompareTag("PauseMenu"))
+            {
                 i.gameObject.SetActive(true);
+            }
         }
 
         foreach(var j in buttons)
         {
             if(j.gameObject.CompareTag("PauseMenu"))
+			{
                 j.gameObject.SetActive(true);
+			}
         }
 
     }

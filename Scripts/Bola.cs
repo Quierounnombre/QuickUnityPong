@@ -10,6 +10,7 @@ public class Bola : MonoBehaviour
 	public Puntuacion Puntuacion;
 
 	public AudioSource[] bounce_sound;
+    public SpriteRenderer   Sp_render;
 
 	public GameManager GameManager;
 
@@ -51,17 +52,33 @@ public class Bola : MonoBehaviour
 */
 	private void LateUpdate()
 	{
-		if (transform.position.x < -9)
+		if (transform.position.x < -9.5f)
 		{
 			GameManager.Score++;
 			Puntuacion.move_score(-2);
 			GameManager.ChangeScene("");
 		}
-		else if (transform.position.x > 9)
+		else if (transform.position.x > 9.5f)
 		{
 			GameManager.Score--;
 			Puntuacion.move_score(2);
 			GameManager.ChangeScene("");
 		}
+	}
+
+	private void restore_color()
+	{
+		Color tmp_color;
+
+		tmp_color = Sp_render.color;
+		if (tmp_color[3] == 0)
+		{
+			Sp_render.color = new Color (255, 255, 255, 255);
+		}
+	}
+
+	private void OnCollisionEnter2D(Collision other)
+	{
+		restore_color();
 	}
 }
