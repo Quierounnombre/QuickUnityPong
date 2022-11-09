@@ -36,10 +36,11 @@ public class Ch_activator : MonoBehaviour
             this.transform.localScale = new Vector3(0.25f, 2f, 1);
 			Sp_render.sprite= Sprite[0];
         }
-		/*
         else
         {
-            this.GetComponent<>().enabled = true;
-        }*/
+            this.GetComponent<palas>().enabled = true;
+            this.transform.localScale = new Vector3(0.5f, 1.5f, 1);
+            Sp_render.sprite = Sprite[0];
+        }
     }
 }

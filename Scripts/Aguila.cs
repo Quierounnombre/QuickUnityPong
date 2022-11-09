@@ -22,7 +22,7 @@ public class Aguila : PlayerControls
 		float	current_pos;
 		int		limiter;
 
-		limiter = 4;
+		limiter = 5;
 		current_pos = transform. position.x;
 		if (current_pos < 0)
 			current_pos = -current_pos;

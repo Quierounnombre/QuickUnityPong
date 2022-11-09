@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: afb9ff5963470984ebc40ac3397671cb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Upheaval Pro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e89db02f90d6b654ca6cb28e6a92fab5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,6 +6,8 @@ public class Invisible : PlayerControls
 {
 	public int				number_of_balls;
 	public SpriteRenderer   Sp_render;
+	public GameObject 		trail;
+	public bool				is_blue;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,14 +36,20 @@ public class Invisible : PlayerControls
 
 	private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Bola")
+        if((GameManager.blue_player == 3 && is_blue) ||
+		(GameManager.red_player == 3 && !is_blue))
         {
-			if (number_of_balls < 3)
-				number_of_balls++;
-			else
-			{
-				Sp_render.color = new Color (255, 255, 255, 0);
-			}
-        }
+            if (collision.gameObject.name == "Bola")
+            {
+	    		if (number_of_balls < 3)
+	    			number_of_balls++;
+	    		else
+	    		{
+		    		Sp_render.color = new Color (255, 255, 255, 0);
+	    			trail.SetActive(false);
+		    		number_of_balls = 0;
+		    	}
+            }
+		}
 	}
 }

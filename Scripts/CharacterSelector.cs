@@ -7,7 +7,6 @@ public class CharacterSelector : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Collider2D cl;
-	public GameObject TooltipBackGround;
 	public GameObject tooltiptext;
 	public GameObject Contrary_Grid;
 	public TextMeshProUGUI text;
@@ -28,7 +27,6 @@ public class CharacterSelector : MonoBehaviour
 
     private void OnMouseOver()
     {
-		TooltipBackGround.SetActive(true);
 		tooltiptext.SetActive(true);
 		Contrary_Grid.SetActive(false);
 		assign_text(selected_text);
@@ -36,7 +34,6 @@ public class CharacterSelector : MonoBehaviour
 
 	private void OnMouseExit()
 	{
-		TooltipBackGround.SetActive(false);
 		tooltiptext.SetActive(false);
 		Contrary_Grid.SetActive(true);
 	}
@@ -62,7 +59,7 @@ public class CharacterSelector : MonoBehaviour
 	{
 		if (selected_text == 1) //Standar
 		{
-			text.text = "Una pala básica para una persona básica ^^";
+			text.text = "Una pala basica para una persona basica ^^";
 		}
 		else if (selected_text == 2) //Aguila
 		{
@@ -70,11 +67,11 @@ public class CharacterSelector : MonoBehaviour
 		}
 		else if (selected_text == 3) //Ilusionista
 		{
-			text.text = "No tienes amigos y no te importa, mientras siga existiendo humanos tendras algo con lo que alimentar el vacio de tu corazón\n\nCada 3 toques la bola es INVISIBLE\n\n disfruta farmeando noobs";
+			text.text = "No tienes amigos y no te importa.\n\nCada 3 toques la bola es INVISIBLE\n\n disfruta farmeando noobs";
 		}
 		else if (selected_text == 4) //Ameba
 		{
-			text.text = "Tu numero de neuronas es igual al numero de golpes que te voy a dar en la cabeza\n\nCada vez que chocas con algo te \"divides\" vuelve a chocar contigo mismo para juntarte";
+			text.text = "Tu numero de neuronas es igual al numero de golpes que te voy a dar en la cabeza\n\n tienes 2 palas una vertical y otra horizontal, ¿sabras manejarlas?";
 		}
 	}
 }

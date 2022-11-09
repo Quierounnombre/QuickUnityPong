@@ -6,6 +6,7 @@ public class Bola : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Collider2D bola;
+	public GameObject trail;
 
 	public Puntuacion Puntuacion;
 
@@ -32,24 +33,9 @@ public class Bola : MonoBehaviour
 
 		rand = Random.Range(0, 6);
 		bounce_sound[rand].Play();
+		restore_color();
 	}
-/*
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-		Vector2 Vresult;
 
-		power = rb.velocity.x;
-		if (power > power_max && power < -power_max)
-		{
-			if (power > 0)
-				power = power_max;
-			else
-				power = power_max;
-		}
-		Vresult = new Vector2 (power, rb.velocity.y);
-    	rb.velocity = Vresult;
-    }
-*/
 	private void LateUpdate()
 	{
 		if (transform.position.x < -9.5f)
@@ -68,17 +54,7 @@ public class Bola : MonoBehaviour
 
 	private void restore_color()
 	{
-		Color tmp_color;
-
-		tmp_color = Sp_render.color;
-		if (tmp_color[3] == 0)
-		{
-			Sp_render.color = new Color (255, 255, 255, 255);
-		}
-	}
-
-	private void OnCollisionEnter2D(Collision other)
-	{
-		restore_color();
+		Sp_render.color = new Color (1, 1, 1, 1);
+		trail.SetActive(true);
 	}
 }

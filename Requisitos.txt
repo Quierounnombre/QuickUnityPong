@@ -11,7 +11,7 @@ Requisitos:
 -Menu de settigns : NOPE
 
 -----ARTES-----
--Fuente propia : NOPE
+-Fuente propia : OK
 -Color de fondo : OK
 -Estetica propia : OK
 -Musica : KO
@@ -20,6 +20,9 @@ Requisitos:
 -Sonido de patos : OK ^^ (NOT OK :/)
 
 -----Extra-----
--Personajes: 2/4
+-Personajes: OK
 -Sistema de selección: OK
--Artes de personajes: WIP
+-Artes de personajes: OK
+
+-----Release-----
+-Subida a itch.io:
