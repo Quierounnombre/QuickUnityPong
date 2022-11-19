@@ -4231,7 +4231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1530059046}
-  speed: 15
+  speed: 18
   speed_increase: 0.1
   Dir: Vertical2
   character: {fileID: 1530059044}
@@ -4338,7 +4338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1530059046}
-  speed: 18
+  speed: 24
   speed_increase: 0.1
   Dir: Vertical2
   character: {fileID: 1530059044}
@@ -4375,7 +4375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1530059046}
-  speed: 15
+  speed: 18
   speed_increase: 0.1
   Dir: Vertical2
   character: {fileID: 1530059044}

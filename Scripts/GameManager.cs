@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     public AudioClip Musica;
 
     public static int Score = 0;
-
     public AudioClip duck;
 
 	private static int stored_red_player = 1;
